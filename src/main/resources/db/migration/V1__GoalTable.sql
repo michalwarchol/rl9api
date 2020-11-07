@@ -1,0 +1,5 @@
+CREATE TABLE t_goal (
+ id UUID NOT NULL PRIMARY KEY,
+ "minute" INT NOT NULL,
+ match_id UUID NOT NULL
+);

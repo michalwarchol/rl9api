@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -26,7 +27,7 @@ public class GoalService {
         return goalDao.selectGoals();
     }
 
-    public Goal selectGoalById(UUID id){
+    public Optional<Goal> selectGoalById(UUID id){
         return goalDao.selectGoalById(id);
     }
 

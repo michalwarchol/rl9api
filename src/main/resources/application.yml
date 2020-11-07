@@ -1,0 +1,6 @@
+app:
+  datasource:
+    jdbc-url: jdbc:postgresql://localhost:5432/rl9api
+    username: postgres
+    password: MichPostgres00
+    pool-size: 30

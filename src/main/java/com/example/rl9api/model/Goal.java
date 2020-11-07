@@ -2,31 +2,20 @@ package com.example.rl9api.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.sql.Timestamp;
 import java.util.UUID;
 
 public class Goal {
     final UUID id;
     final int minute;
-    final int year;
-    final int month;
-    final int day;
-    final String opponent;
-    final String team;
+    final UUID match_id;
 
     public Goal(@JsonProperty("id") UUID id,
                 @JsonProperty("minute") int minute,
-                @JsonProperty("year") int year,
-                @JsonProperty("month") int month,
-                @JsonProperty("day") int day,
-                @JsonProperty("opponent") String opponent,
-                @JsonProperty("team") String team) {
+                @JsonProperty("match_id") UUID match_id) {
         this.id = id;
         this.minute = minute;
-        this.year = year;
-        this.month = month;
-        this.day = day;
-        this.opponent = opponent;
-        this.team = team;
+        this.match_id=match_id;
     }
 
     public UUID getId() {
@@ -37,23 +26,8 @@ public class Goal {
         return minute;
     }
 
-    public int getYear() {
-        return year;
+    public UUID getMatch_id() {
+        return match_id;
     }
 
-    public int getMonth() {
-        return month;
-    }
-
-    public int getDay() {
-        return day;
-    }
-
-    public String getOpponent() {
-        return opponent;
-    }
-
-    public String getTeam() {
-        return team;
-    }
 }
